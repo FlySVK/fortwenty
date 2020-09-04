@@ -1,0 +1,17 @@
+<form><input style="max-width:360px; width:100%; border-radius:3px; padding:5px 10px; border:1px solid #aaa" placeholder="Nickname" id="voteInput" type="text" onchange="liveLink()" onkeyup="this.onchange()" oninput="this.onchange()">
+
+	<a style="margin-top:10px; margin-bottom:15px; max-width:360px; width:100%; padding:5px 10px; font-weight:bold; color:#fff; display:inline-block; background-color:#2196F3; border-radius:3px; text-decoration:none; text-align:center" id="voteLink" href="https://craftlist.org/twentycraft">Hlasovať za server</a></form><script type="text/javascript">
+
+	var link = document.getElementById("voteLink"); core = link.href;
+
+    function liveLink() {var v = document.getElementById("voteInput").value;
+
+t = core;if(v !== '') {t += '?nickname=' + v;}link.href = t;}
+
+    document.getElementById('voteInput').onkeypress = function(e){
+
+        if (!e) e = window.event;var keyCode = e.keyCode || e.which;
+
+        if (keyCode == '13'){window.location.assign(link.href);return false;}}
+
+</script>
